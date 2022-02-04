@@ -10,23 +10,23 @@ export function App() {
 
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
 
-  function handleOpenNreTransactionModal() {
+  function handleOpenNewTransactionModal() {
     setIsNewTransactionModalOpen(true);
   }
-  function handleCloseNreTransactionModal() {
+  function handleCloseNewTransactionModal() {
     setIsNewTransactionModalOpen(false);
   }
 
 
   return (
     <>
-      <Header onOpenNewTransactionModal={handleOpenNreTransactionModal}/>
+      <Header onOpenNewTransactionModal={handleOpenNewTransactionModal}/>
 
       <Dashboard />
 
       <Modal 
         isOpen={isNewTransactionModalOpen} 
-        onRequestClose={handleCloseNreTransactionModal}
+        onRequestClose={handleCloseNewTransactionModal}
       >
         <h2>Cadastrar Transação</h2>
       </Modal>
